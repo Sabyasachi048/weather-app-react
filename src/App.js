@@ -2,7 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 // import jsondata from "./weather.json";
 import React, { useState, useEffect, Component } from "react";
-import useGeolocation from "react-hook-geolocation";
+
 import { getName } from "country-list";
 import axios from "axios";
 

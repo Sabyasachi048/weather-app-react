@@ -1,7 +1,6 @@
-import logo from "./logo.svg";
 import "./App.css";
 // import jsondata from "./weather.json";
-import React, { useState, useEffect, Component } from "react";
+import React, { useState, useEffect } from "react";
 
 import { getName } from "country-list";
 import axios from "axios";
@@ -12,21 +11,12 @@ const api_key = "8f9b4dd4a16b52fcd66d2e11fceedc37";
 //"b190a0605344cc4f3af08d0dd473dd25";
 
 function App() {
-  const [status, setStatus] = useState("geolocation not supported");
   const [weatherData, setWeatherData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
   const [main, setMain] = useState({});
   const [weather, setWeather] = useState([]);
-  const [time, setTime] = useState(60000);
   const [location, setLocation] = useState({ longitude: null, latitude: null });
-
-  // const [position, error] = useCurrentPosition();
-  // console.log(position);
-
-  // const getLocation = () => {
-  //   return useGeolocation();
-  // };
 
   useEffect(() => {
     const fetchData = () => {

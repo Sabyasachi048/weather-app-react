@@ -55,15 +55,17 @@ function App() {
       }
     };
     if (isLoading) {
-      fetchData();
-      setIsError(true);
-      if (weatherData !== undefined) {
-        console.log(weatherData);
-        setMain(weatherData.main);
-        setWeather(weatherData.weather);
-        setIsLoading(false);
-        setIsError(false);
-      }
+      setTimeout(() => {
+        fetchData();
+        setIsError(true);
+        if (weatherData !== undefined) {
+          console.log(weatherData);
+          setMain(weatherData.main);
+          setWeather(weatherData.weather);
+          setIsLoading(false);
+          setIsError(false);
+        }
+      }, 1000);
     }
     return () => {};
   }, [isLoading, weatherData, location]);

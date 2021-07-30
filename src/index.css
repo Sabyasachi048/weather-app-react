@@ -87,6 +87,7 @@ button.btn {
 }
 
 .weather-logo,
+.weather-img,
 img {
   -webkit-user-select: none;
      -moz-user-select: none;

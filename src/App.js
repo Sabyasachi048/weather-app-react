@@ -64,7 +64,7 @@ function App() {
           setIsLoading(false);
           setIsError(false);
         }
-      }, 1000);
+      }, 2000);
     }
     return () => {};
   }, [isLoading, weatherData, location]);
@@ -74,6 +74,7 @@ function App() {
       <>
         <div className='main-container'>
           <h1>Loading..</h1>
+          <div className='loading-bar'></div>
         </div>
       </>
     );
@@ -127,17 +128,17 @@ function App() {
           />
         </div>
         <div className='weather-text'>
-          <h2>Current Weather: {weather ? weather[0].main : "Unknown"}</h2>
+          <h3>Current Weather: {weather ? weather[0].main : "Unknown"}</h3>
         </div>
         <div className='current-temp'>
-          <h2>
+          <h3>
             Current Temperature: {(main ? main.temp - 273.15 : 0).toFixed(2)} °C
-          </h2>
+          </h3>
         </div>
         <div className='feels-like-temp'>
-          <h2>
+          <h3>
             Feels Like: {(main ? main.feels_like - 273.15 : 0).toFixed(2)} °C
-          </h2>
+          </h3>
         </div>
         <div className='humidity'>
           <h3>Humidity: {main ? main.humidity : 0}%</h3>

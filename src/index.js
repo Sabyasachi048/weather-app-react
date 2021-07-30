@@ -3,9 +3,13 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import logo from "./weather-logo.svg";
 
 ReactDOM.render(
   <React.StrictMode>
+    <div className='weather-logo'>
+      <img src={logo} alt='Weather' />
+    </div>
     <div className='container'>
       <App />
     </div>

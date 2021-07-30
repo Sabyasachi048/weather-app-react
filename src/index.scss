@@ -16,12 +16,14 @@ code {
 }
 
 .container {
-  display: block;
+  display: flex;
+  flex-direction: column;
+
   align-items: center;
   align-self: center;
   // vertical-align: middle;
-  margin: 7.5%;
-  margin-inline: 20%;
+  margin: 0;
+  // margin-inline: 20%;
   width: auto;
   grid-template-columns: repeat(3, 1fr);
 }
@@ -53,4 +55,13 @@ button.btn {
   padding-block: 2.5%;
   padding-inline: 7.5%;
   cursor: pointer;
+}
+
+.weather-logo {
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  align-items: center;
+  text-align: center;
+  align-self: center;
 }

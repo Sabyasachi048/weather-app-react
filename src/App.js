@@ -1,7 +1,6 @@
 import "./App.css";
 // import jsondata from "./weather.json";
 import React, { useState, useEffect } from "react";
-import logo from "./weather-logo.svg";
 import { getName } from "country-list";
 import axios from "axios";
 
